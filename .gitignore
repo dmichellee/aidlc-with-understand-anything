@@ -9,3 +9,5 @@
 !templates/.kiro/
 !templates/.kiro/**
 
+node_modules
+_book/

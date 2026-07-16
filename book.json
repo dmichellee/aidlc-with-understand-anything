@@ -1,3 +1,6 @@
 {
-  "plugins": ["todo", "livecheckbox"]
+  "plugins": ["todo", "livecheckbox", "-sharing"],
+  "styles": {
+    "website": "assets/custom.css"
+  }
 }

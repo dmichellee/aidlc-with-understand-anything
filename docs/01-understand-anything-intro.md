@@ -1,22 +1,22 @@
 # 1. Understand Anything 소개
 
-> ⏱️ 예상 시간: 15분
+> 예상 시간: 15분
 
-## 🎯 학습 목표
+## 학습 목표
 
 - Understand Anything이 무엇을 하는 도구인지 이해한다
 - 생성되는 Knowledge Graph의 구조(nodes/edges/layers/tour)를 파악한다
 - 그래프가 "왜 grep보다 나은 지도"인지 설명할 수 있다
 
-## 📖 개념
+## 개념
 
 [Understand Anything](https://github.com/Egonex-AI/Understand-Anything)은 코드베이스를 분석해 **interactive knowledge graph**를 생성하는 도구입니다. LLM 기반 분석 파이프라인이 프로젝트를 스캔하고, 파일·함수·클래스와 그 관계를 추출해 하나의 JSON 그래프로 만듭니다.
 
 결과물은 프로젝트 데이터 디렉토리에 저장됩니다.
 
 ```
-<project>/.ua/knowledge-graph.json      ← 그래프 본체
-<project>/.ua/meta.json                 ← 커밋 해시·분석 시각 등 메타데이터
+<project>/.ua/knowledge-graph.json ← 그래프 본체
+<project>/.ua/meta.json ← 커밋 해시·분석 시각 등 메타데이터
 ```
 
 > `.understand-anything/` 디렉토리가 이미 있으면 레거시 경로로 그걸 쓰고, 없으면 새 경로 `.ua/`를 씁니다.
@@ -36,13 +36,13 @@
 
 ```json
 {
-  "id": "class:src/main/java/com/example/auth/JwtAuthenticationProvider.java:JwtAuthenticationProvider",
-  "type": "class",
-  "name": "JwtAuthenticationProvider",
-  "filePath": "src/main/java/com/example/auth/JwtAuthenticationProvider.java",
-  "summary": "Spring Security AuthenticationProvider that verifies JWT ...",
-  "tags": ["security", "authentication", "spring"],
-  "complexity": "moderate"
+ "id": "class:src/main/java/com/example/auth/JwtAuthenticationProvider.java:JwtAuthenticationProvider",
+ "type": "class",
+ "name": "JwtAuthenticationProvider",
+ "filePath": "src/main/java/com/example/auth/JwtAuthenticationProvider.java",
+ "summary": "Spring Security AuthenticationProvider that verifies JWT ...",
+ "tags": ["security", "authentication", "spring"],
+ "complexity": "moderate"
 }
 ```
 
@@ -57,7 +57,7 @@
 
 `source`가 `target`을 `imports` 한다는 뜻입니다. 이 엣지들을 따라가면 **호출 체인**과 **의존 관계**를 추적할 수 있습니다.
 
-## 📖 그래프 vs grep — 왜 지도가 필요한가
+## 그래프 vs grep — 왜 지도가 필요한가
 
 레거시에서 "인증이 어디서 처리되지?"를 찾는다고 합시다.
 
@@ -66,10 +66,10 @@
 
 > 그래프는 **지도**, 소스코드는 **최종 근거**입니다. 이 워크샵 내내 반복되는 원칙입니다.
 
-> 📸 **스크린샷 자리** — 대시보드에서 노드·엣지가 보이는 전체 그래프 (그래프 구조 감 잡기용)
+> **스크린샷 자리** — 대시보드에서 노드·엣지가 보이는 전체 그래프 (그래프 구조 감 잡기용)
 > <!-- ![Knowledge Graph 전체 구조](../assets/01-graph-structure.png) -->
 
-## ⌨️ 실습 — 그래프 구조 눈으로 확인하기
+## 실습 — 그래프 구조 눈으로 확인하기
 
 아직 그래프를 생성하지 않았다면 이 실습은 2장 이후 다시 봐도 됩니다. 이미 `.ua/knowledge-graph.json`이 있는 모듈이 있다면, 전체를 열지 말고 **구조만** 확인해 봅니다.
 
@@ -87,18 +87,18 @@ grep -o '"type": *"[a-z_]*"' <module>/.ua/knowledge-graph.json | sort | uniq -c 
  155 "type": "file"
  133 "type": "class"
  122 "type": "imports"
-  14 "type": "calls"
+ 14 "type": "calls"
 ```
 
 > 이렇게 "지도에 무엇이 얼마나 있는지"를 먼저 파악하면, 이후 검색 전략을 세우기 쉽습니다.
 
-## ✅ 체크포인트
+## 체크포인트
 
 - [ ] Understand Anything의 결과물이 `.ua/knowledge-graph.json`이라는 것을 안다
 - [ ] nodes / edges / layers / tour의 역할을 설명할 수 있다
 - [ ] "그래프로 좁히고 소스로 확증한다"는 원칙을 이해했다
 
-## 🔧 트러블슈팅
+## 트러블슈팅
 
 | 증상 | 해결 |
 | --- | --- |
