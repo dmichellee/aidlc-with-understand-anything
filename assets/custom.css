@@ -1,79 +1,99 @@
 /* ============================================
-   AIDLC Workshop — Dark Modern + Gold Accent
-   Palette: #FFFFFF / #E5E5E5 / #FCA311 / #13213C / #000000
+   AIDLC Workshop — Corporate Modern Theme
+   Palette (Enno Studio inspired):
+     Primary: #002B64
+     Primary Dark: #011431
+     Accent: #FFCC02
+     Grey 100: #D70000 (error) — not used here
+     Grey 200: #60626C
+     Grey 300: #333333
+     Grey 400: #191919
+     Signals: #3A8500 (success), #D07000 (warning)
+   Font: Inter
    ============================================ */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
-/* --- Base Typography --- */
+/* --- Base --- */
 .book .book-body .page-wrapper .page-inner {
   max-width: 820px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 15px;
-  line-height: 1.8;
-  color: #13213C;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #333333;
 }
 
 /* --- Headings --- */
 .book .book-body h1 {
-  font-size: 1.9em;
+  font-size: 2em;
   font-weight: 800;
-  margin-top: 1.5em;
-  padding-bottom: 0.3em;
-  border-bottom: 3px solid #FCA311;
-  color: #000000;
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.35em;
+  border-bottom: 3px solid #FFCC02;
+  color: #011431;
+  letter-spacing: -0.02em;
 }
 
 .book .book-body h2 {
-  font-size: 1.4em;
+  font-size: 1.45em;
   font-weight: 700;
-  margin-top: 1.8em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
   padding-bottom: 0.2em;
-  border-bottom: 1px solid #E5E5E5;
-  color: #13213C;
+  border-bottom: 1px solid #e0e0e0;
+  color: #002B64;
 }
 
 .book .book-body h3 {
   font-size: 1.15em;
   font-weight: 600;
-  margin-top: 1.4em;
-  color: #13213C;
+  margin-top: 1.5em;
+  color: #002B64;
 }
 
 /* --- Links --- */
 .book .book-body a {
-  color: #FCA311;
+  color: #002B64;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  border-bottom: 1.5px solid #FFCC02;
+  transition: background 0.2s ease;
 }
 
 .book .book-body a:hover {
-  border-bottom-color: #FCA311;
+  background: #FFCC0220;
 }
 
-/* --- Blockquotes — Note/Tip Style --- */
+/* --- Blockquotes — Clean Card Style --- */
 .book .book-body blockquote {
+  border-left: none;
+  background: #f7f9fc;
+  padding: 18px 24px;
+  margin: 24px 0;
+  border-radius: 8px;
+  border: 1px solid #e4e9f0;
+  color: #333333;
+  font-size: 0.93em;
   position: relative;
-  border-left: 4px solid #FCA311;
-  background: #FCA31110;
-  padding: 16px 20px 16px 20px;
-  margin: 20px 0;
-  border-radius: 0 8px 8px 0;
-  color: #13213C;
-  font-size: 0.92em;
 }
 
 .book .book-body blockquote::before {
   content: "NOTE";
-  display: block;
-  font-size: 0.7em;
+  display: inline-block;
+  font-size: 0.65em;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #FCA311;
-  margin-bottom: 6px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  background: #002B64;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.book .book-body blockquote p:first-child {
+  margin-top: 8px;
 }
 
 .book .book-body blockquote p:last-child {
@@ -84,173 +104,208 @@
 .book .book-body table {
   border-collapse: collapse;
   width: 100%;
-  margin: 20px 0;
-  font-size: 0.9em;
-  border-radius: 6px;
-  overflow: hidden;
+  margin: 24px 0;
+  font-size: 0.88em;
 }
 
 .book .book-body table th {
-  background: #13213C;
-  color: #FFFFFF;
+  background: #002B64;
+  color: #ffffff;
   font-weight: 600;
   text-align: left;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .book .book-body table td,
 .book .book-body table th {
-  padding: 10px 14px;
-  border: 1px solid #E5E5E5;
+  padding: 11px 16px;
+  border: 1px solid #e4e9f0;
 }
 
 .book .book-body table tr:nth-child(even) {
-  background: #f8f9fa;
+  background: #f9fafb;
 }
 
 .book .book-body table tr:hover {
-  background: #FCA31108;
+  background: #f0f4f8;
 }
 
 /* --- Code (inline) --- */
 .book .book-body code {
-  background: #E5E5E5;
+  background: #f0f2f5;
   padding: 2px 7px;
   border-radius: 4px;
-  font-size: 0.86em;
-  color: #13213C;
+  font-size: 0.85em;
+  color: #002B64;
   font-family: 'Fira Code', 'Consolas', monospace;
   font-weight: 500;
 }
 
-/* --- Code Blocks --- */
+/* --- Code Blocks — wrap instead of scroll --- */
 .book .book-body pre {
-  background: #0d1b2a;
+  background: #011431;
   border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
+  padding: 20px 24px;
+  margin: 24px 0;
   overflow-x: auto;
-  border: 1px solid #1b2d45;
+  border: 1px solid #1a2d4a;
 }
 
 .book .book-body pre code {
   background: none;
-  color: #e0e0e0;
+  color: #e8ecf0;
   padding: 0;
   font-size: 0.84em;
-  line-height: 1.65;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 /* --- Lists --- */
 .book .book-body ul,
 .book .book-body ol {
-  padding-left: 1.5em;
+  padding-left: 1.4em;
 }
 
 .book .book-body li {
-  margin-bottom: 0.45em;
+  margin-bottom: 0.5em;
+}
+
+/* --- Checkboxes — fix clipping --- */
+.book .book-body li.task-list-item,
+.book .book-body li:has(> input[type="checkbox"]) {
+  list-style: none;
+  margin-left: -1.4em;
+  padding-left: 0;
+}
+
+.book .book-body input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #002B64;
+  border-radius: 4px;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.book .book-body input[type="checkbox"]:checked {
+  background: #002B64;
+  border-color: #002B64;
+}
+
+.book .book-body input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #FFCC02;
+  font-size: 12px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* --- Sidebar --- */
 .book .book-summary {
-  background: #13213C;
+  background: #011431;
   border-right: none;
 }
 
 .book .book-summary ul.summary li a,
 .book .book-summary ul.summary li span {
-  color: #b0bec5;
-  font-size: 0.88em;
-  padding: 10px 20px;
-  transition: all 0.2s ease;
+  color: #a0b0c4;
+  font-size: 0.87em;
+  font-weight: 400;
+  padding: 10px 22px;
+  transition: all 0.15s ease;
 }
 
 .book .book-summary ul.summary li a:hover {
-  color: #FFFFFF;
-  background: rgba(252, 163, 17, 0.1);
+  color: #ffffff;
+  background: rgba(255, 204, 2, 0.06);
   text-decoration: none;
 }
 
 .book .book-summary ul.summary li.active > a {
-  color: #FCA311;
-  background: rgba(252, 163, 17, 0.08);
-  border-right: 3px solid #FCA311;
+  color: #FFCC02;
+  background: rgba(255, 204, 2, 0.08);
+  border-right: 3px solid #FFCC02;
   font-weight: 600;
 }
 
 .book .book-summary ul.summary li.header {
-  color: #FCA311;
+  color: #FFCC02;
   text-transform: uppercase;
-  font-size: 0.72em;
+  font-size: 0.7em;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 20px 20px 6px;
+  letter-spacing: 0.1em;
+  padding: 24px 22px 6px;
 }
 
 .book .book-summary ul.summary li.divider {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 /* --- Header bar --- */
 .book .book-header {
-  background: #FFFFFF;
-  border-bottom: 1px solid #E5E5E5;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e9f0;
   box-shadow: none;
 }
 
 .book .book-header h1 {
-  border-bottom: none;
+  border: none;
   margin: 0;
   padding: 0;
-}
-
-/* --- Checkboxes --- */
-.book .book-body input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  accent-color: #FCA311;
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-.book .book-body input[type="checkbox"]:checked + span,
-.book .book-body input[type="checkbox"]:checked ~ span {
-  color: #6b7280;
 }
 
 /* --- Horizontal Rules --- */
 .book .book-body hr {
   border: none;
-  border-top: 2px solid #E5E5E5;
+  border-top: 1px solid #e4e9f0;
   margin: 2.5em 0;
 }
 
-/* --- Strong / Bold --- */
+/* --- Strong --- */
 .book .book-body strong {
   font-weight: 700;
-  color: #000000;
+  color: #011431;
 }
 
-/* --- Navigation arrows --- */
+/* --- Navigation --- */
 .book .book-body .navigation {
-  color: #FCA311;
+  color: #002B64;
 }
 
 .book .book-body .navigation:hover {
-  color: #e09200;
+  color: #FFCC02;
 }
 
-/* --- Page background subtle touch --- */
+/* --- Page background --- */
 .book .book-body {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
-/* --- Scrollbar (Webkit) --- */
+/* --- Scrollbar --- */
 .book .book-summary::-webkit-scrollbar {
   width: 4px;
 }
 
 .book .book-summary::-webkit-scrollbar-thumb {
-  background: rgba(252, 163, 17, 0.3);
+  background: rgba(255, 204, 2, 0.25);
   border-radius: 2px;
+}
+
+/* --- Selection --- */
+.book .book-body ::selection {
+  background: #FFCC0240;
 }
