@@ -1,7 +1,7 @@
 {
   "name": "aidlc-with-ua",
   "version": "1.0.0",
-  "description": "Code Knowledge Graph를 활용해 Brownfield 워크로드를 AI-DLC로 개발하는 핸즈온 워크샵입니다.",
+  "description": "Code Knowledge Graph를 활용해 AI-DLC로 개발하는 핸즈온 워크샵입니다.",
   "main": "index.js",
   "directories": {
     "doc": "docs"

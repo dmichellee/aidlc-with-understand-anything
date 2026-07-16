@@ -1,5 +1,7 @@
 # 1. Understand Anything 소개
 
+![Understand Anything](../assets/hero.png)
+
 > 예상 시간: 15분
 
 ## 학습 목표

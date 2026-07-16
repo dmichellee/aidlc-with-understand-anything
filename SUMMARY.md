@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Code Knowledge Graph로 Brownfield를 AI-DLC로 개발하기](README.md)
+* [Code Knowledge Graph를 활용해 AI-DLC로 개발하기](README.md)
 
 ## 본 과정
 

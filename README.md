@@ -1,4 +1,6 @@
-# Code Knowledge Graph로 Brownfield를 AI-DLC로 개발하기
+# Code Knowledge Graph를 활용해 AI-DLC로 개발하기
+
+![AIDLC Workshop](assets/aidlc-image.png)
 
 레거시 시스템(Brownfield)을 **Code Knowledge Graph**로 지도화하고, 그 지도를 **Kiro**에 물려 **AI-DLC(AI-Driven Development Lifecycle)** 워크플로우로 안전하게 변경·확장하는 핸즈온 워크샵입니다.
 
