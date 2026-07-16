@@ -1,0 +1,28 @@
+{
+  "name": "aidlc-with-ua",
+  "version": "1.0.0",
+  "description": "Code Knowledge Graph를 활용해 Brownfield 워크로드를 AI-DLC로 개발하는 핸즈온 워크샵입니다.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "honkit serve",
+    "build": "honkit build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kiro",
+    "understand-anything",
+    "knowledge-graph",
+    "ai-dlc",
+    "brownfield"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "honkit": "^6.2.2",
+    "honkit-plugin-livecheckbox": "file:tools/checkbox-plugin",
+    "honkit-plugin-todo": "^1.0.0"
+  }
+}

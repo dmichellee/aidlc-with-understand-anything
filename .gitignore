@@ -1,0 +1,11 @@
+.omni/
+.claude/
+.github/
+.cursor/
+.kiro/
+.agents/
+
+# 워크샵 Option B 템플릿(.kiro 예시 파일)은 공유 대상이므로 예외로 포함
+!templates/.kiro/
+!templates/.kiro/**
+
