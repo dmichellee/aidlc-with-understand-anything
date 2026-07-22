@@ -31,32 +31,7 @@
 | 장점 | 생성 과정을 이해하며 학습 | 빠르고 일관됨. 실습 시간 절약 |
 | 적합 | 스킬 작성 원리를 익히고 싶을 때 | 곧바로 동작하는 결과가 필요할 때 |
 
-> 아래 **실습 1~3은 옵션 A**입니다. 옵션 B로 바로 가려면 이 섹션 끝의 **" 옵션 B — 준비된 파일로 한 번에 설치"** 로 건너뛰세요. 어느 쪽이든 이후 **실습 4(에이전트 연결)** 는 동일하게 필요합니다.
-
-### 옵션 B — 준비된 파일로 한 번에 설치
-
-워크샵에 완성된 템플릿이 `templates/.kiro/` 아래에 들어 있습니다.
-
-```
-templates/.kiro/
-├── skills/kg-search/SKILL.md
-├── skills/kg-explain/SKILL.md
-└── steering/kg-search-rules.md
-```
-
-프로젝트 루트에서 복사합니다.
-
-```bash
-cp -R /path/to/workshop/templates/.kiro/. ./.kiro/
-```
-
-복사 후 **반드시** 다음을 하세요.
-
-1. `kg-search/SKILL.md`와 `kg-search-rules.md`의 `<module-a>`, `<module-b>` … 자리표시자를 **여러분 리포의 실제 모듈명**으로 교체
-2. 도메인 용어에 맞게 키워드 확장 목록(인증→auth 등) 보강
-3. 실습 4로 넘어가 에이전트에 연결
-
-> 자세한 사용법은 `templates/README.md`를 참고하세요. 옵션 B를 골랐다면 실습 1~3은 건너뛰고 **실습 4**로 가세요.
+> 아래 **실습 1~3은 옵션 A**입니다. 옵션 B로 바로 가려면 **실습 3 아래의 "옵션 B — 준비된 파일로 한 번에 설치"** 로 건너뛰세요. 어느 쪽이든 이후 **실습 4(에이전트 연결)** 는 동일하게 필요합니다.
 
 ---
 
@@ -134,6 +109,33 @@ description: Use when you need to inspect or understand existing module source c
 | 1. description | 두 스킬 모두 "이 경우엔 다른 스킬을 써라"를 명시 (스킬 라우팅의 1차 기준) |
 | 2. 스킬 본문 게이트 | 실행 전 "대상이 특정됐나?" 스스로 판단하는 문구 |
 | 3. steering 단일 규칙 | 판단 기준의 single source of truth |
+
+## 옵션 B — 준비된 파일로 한 번에 설치
+
+워크샵에 완성된 템플릿이 `templates/.kiro/` 아래에 들어 있습니다.
+
+```
+templates/.kiro/
+├── skills/kg-search/SKILL.md
+├── skills/kg-explain/SKILL.md
+└── steering/kg-search-rules.md
+```
+
+프로젝트 루트에서 복사합니다.
+
+```bash
+cp -R /path/to/workshop/templates/.kiro/. ./.kiro/
+```
+
+복사 후 **반드시** 다음을 하세요.
+
+1. `kg-search/SKILL.md`와 `kg-search-rules.md`의 `<module-a>`, `<module-b>` … 자리표시자를 **여러분 리포의 실제 모듈명**으로 교체
+2. 도메인 용어에 맞게 키워드 확장 목록(인증→auth 등) 보강
+3. 실습 4로 넘어가 에이전트에 연결
+
+> 자세한 사용법은 `templates/README.md`를 참고하세요. 옵션 B를 골랐다면 실습 1~3은 건너뛰고 **실습 4**로 가세요.
+
+---
 
 ## 실습 4 — 커스텀 에이전트에 연결하기
 
