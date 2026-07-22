@@ -36,8 +36,8 @@
 
 | 챕터 | 내용 | 시간 |
 | --- | --- | --- |
-| 1 | Understand Anything 소개 | 15분 |
-| 2 | Interactive Knowledge Graph 만들기 (설치 포함) | 30분 |
+| 1 | Understand Anything 소개 및 설치 | 15분 |
+| 2 | Interactive Knowledge Graph 만들기 | 30분 |
 | 3 | Kiro가 Knowledge Graph를 활용하게 하기 | 40분 |
 | 4 | 운영·정책 문서 추가하기 | 20분 |
 | 5 | **AI-DLC Brownfield 워크플로우 실행 (메인 실습)** | 40분 |
@@ -47,7 +47,7 @@
 
 - [ ] **터미널** — macOS/Linux 기본 터미널, Windows는 Windows Terminal 또는 WSL(Ubuntu)
 - [ ] **Kiro CLI** — 설치 완료 후 `kiro-cli chat`로 로그인까지 확인
-- [ ] **Node.js ≥ 22 / pnpm ≥ 10** — `node -v`, `pnpm -v`로 확인 (Understand Anything 실행에 필요)
+- [ ] **Node.js ≥ 18** — `node -v`로 확인 (Understand Anything 실행에 필요)
 - [ ] **분석 대상 코드베이스** — git 저장소 형태 권장 (없으면 진행자가 제공하는 샘플 리포 사용)
 - [ ] **인터넷 연결** — 설치·로그인·AI 응답에 필요
 

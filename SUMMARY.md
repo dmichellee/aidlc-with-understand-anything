@@ -5,7 +5,7 @@
 ## 본 과정
 
 * [0. 워크샵 소개](docs/00-intro.md)
-* [1. Understand Anything 소개](docs/01-understand-anything-intro.md)
+* [1. Understand Anything 소개 및 설치](docs/01-understand-anything-intro.md)
 * [2. Interactive Knowledge Graph 만들기](docs/02-build-knowledge-graph.md)
 * [3. Kiro가 Knowledge Graph를 활용하게 하기](docs/03-kiro-integration.md)
 * [4. 운영·정책 문서 추가하기](docs/04-add-docs.md)

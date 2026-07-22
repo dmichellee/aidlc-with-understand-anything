@@ -28,7 +28,7 @@
 - **사전 준비물**
  - 터미널 (macOS / Linux / Windows Terminal·WSL)
  - **Kiro CLI** 설치 + 로그인
- - **Node.js ≥ 22, pnpm ≥ 10** (Understand Anything 실행에 필요)
+ - **Node.js ≥ 18** (Understand Anything 실행에 필요)
  - 분석 대상 코드베이스 (git 저장소 권장)
 - **소요 시간**: 약 2.5시간
 
@@ -43,8 +43,8 @@
 **본 과정**
 
 0. [워크샵 소개](docs/00-intro.md)
-1. [Understand Anything 소개](docs/01-understand-anything-intro.md)
-2. [Interactive Knowledge Graph 만들기 (설치 포함)](docs/02-build-knowledge-graph.md)
+1. [Understand Anything 소개 및 설치](docs/01-understand-anything-intro.md)
+2. [Interactive Knowledge Graph 만들기](docs/02-build-knowledge-graph.md)
 3. [Kiro가 Knowledge Graph를 활용하게 하기](docs/03-kiro-integration.md)
 4. [운영·정책 문서 추가하기](docs/04-add-docs.md)
 5. [AI-DLC Brownfield 워크플로우 실행하기](docs/05-aidlc-brownfield.md)
