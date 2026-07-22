@@ -37,6 +37,8 @@
 
 ## 실습 1 — `kg-search` 스킬 만들기 (옵션 A)
 
+> **💡 아래 프롬프트는 예시입니다.** 여러분의 워크로드(모듈 구조, 도메인 용어, 언어 등)에 맞게 커스터마이징해서 사용하세요.
+
 `.kiro/skills/kg-search/SKILL.md`를 만듭니다. 스킬 파일은 반드시 YAML frontmatter(`name`, `description`)로 시작해야 합니다.
 
 > **Kiro에게 시킬 프롬프트**
@@ -121,19 +123,13 @@ templates/.kiro/
 └── steering/kg-search-rules.md
 ```
 
-프로젝트 루트에서 복사합니다.
+프로젝트 루트에서 복사합니다. (아래 명령어 실행 혹은 IDE에서 직접 작업)
 
 ```bash
 cp -R /path/to/workshop/templates/.kiro/. ./.kiro/
 ```
 
-복사 후 **반드시** 다음을 하세요.
-
-1. `kg-search/SKILL.md`와 `kg-search-rules.md`의 `<module-a>`, `<module-b>` … 자리표시자를 **여러분 리포의 실제 모듈명**으로 교체
-2. 도메인 용어에 맞게 키워드 확장 목록(인증→auth 등) 보강
-3. 실습 4로 넘어가 에이전트에 연결
-
-> 자세한 사용법은 `templates/README.md`를 참고하세요. 옵션 B를 골랐다면 실습 1~3은 건너뛰고 **실습 4**로 가세요.
+> 자세한 사용법은 `templates/README.md`를 참고하세요.
 
 ---
 
@@ -151,9 +147,6 @@ cp -R /path/to/workshop/templates/.kiro/. ./.kiro/
 }
 ```
 
-- `skill://.kiro/skills/*/SKILL.md` — **와일드카드 글롭**이라 `kg-search`, `kg-explain` 등 새 스킬이 자동 포함됩니다. 스킬을 추가할 때마다 등록할 필요 없습니다.
-- **steering은 다릅니다** — 커스텀 에이전트는 steering을 자동 로드하지 않으므로, `kg-search-rules.md`는 `file://`로 **명시적으로** 넣어야 합니다.
-
 > **주의**: 기본적으로 커스텀 에이전트는 default resource(전역/워크스페이스 steering·skill)를 상속받습니다. 하지만 `chat.disableInheritingDefaultResources`가 `true`면 상속이 꺼지므로, 필요한 리소스는 명시적으로 선언하는 것이 안전합니다.
 
 설정 검증:
@@ -168,6 +161,10 @@ kiro-cli agent validate --path .kiro/agents/graph-aidlc-agent.json
 ## 실습 5 — 동작 확인
 
 에이전트로 세션을 열고 자연어로 물어봅니다.
+
+```bash
+kiro-cli chat --agent graph-aidlc-agent
+```
 
 > **Kiro에게 시킬 프롬프트**
 > ```
