@@ -27,12 +27,12 @@ Greenfield(신규)와 달리 브라운필드는 **기존 코드가 진실의 원
 
 ## 실습 0 — AI-DLC 에이전트 준비
 
-3장에서 만든 에이전트(`aidlc-main`)가 워크플로우 규칙(steering)과 그래프 스킬을 모두 갖고 있어야 합니다.
+3장에서 만든 에이전트(`graph-aidlc-agent`)가 워크플로우 규칙(steering)과 그래프 스킬을 모두 갖고 있어야 합니다.
 
 ```json
 {
- "name": "aidlc-main",
- "prompt": "file://./prompts/aidlc-main.md",
+ "name": "graph-aidlc-agent",
+ "prompt": "file://./prompts/graph-aidlc-agent.md",
  "resources": [
  "file://.kiro/steering/aws-aidlc-rules/core-workflow.md",
  "file://.kiro/steering/kg-search-rules.md",
@@ -45,7 +45,7 @@ Greenfield(신규)와 달리 브라운필드는 **기존 코드가 진실의 원
 - `kg-search-rules.md` — "코드 파악 시 그래프 먼저" 규칙 (2·3장 결과물)
 - 스킬 글롭 — `kg-search`/`kg-explain` 자동 포함
 
-> 에이전트 프롬프트(`aidlc-main.md`)에 "기존 코드 파악 시 모듈 그래프를 먼저 검색하라"를 명시해 두면, Reverse Engineering이 그래프 기반으로 흐릅니다.
+> 에이전트 프롬프트(`graph-aidlc-agent.md`)에 "기존 코드 파악 시 모듈 그래프를 먼저 검색하라"를 명시해 두면, Reverse Engineering이 그래프 기반으로 흐릅니다.
 
 ## 실습 1 — 워크플로우 시작 & Reverse Engineering
 
@@ -53,7 +53,7 @@ Greenfield(신규)와 달리 브라운필드는 **기존 코드가 진실의 원
 
 > **Kiro에게 시킬 프롬프트**
 > ```
-> 이 레거시 시스템에 "가입 해지 시 위약금 자동 계산" 기능을 추가하고 싶어.
+> 이 어플리케이션에 "가입 해지 시 위약금 자동 계산" 기능을 추가하고 싶어.
 > docs/ 폴더에 기존 개발 및 운영 관련 문서를 넣어두었으니 reverse engineering 시 참고해.
 > AI-DLC 워크플로우로 진행해줘.
 > ```

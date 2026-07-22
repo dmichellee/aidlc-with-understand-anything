@@ -137,11 +137,11 @@ description: Use when you need to inspect or understand existing module source c
 
 ## 실습 4 — 커스텀 에이전트에 연결하기
 
-이제 스킬·steering을 에이전트가 실제로 로드하게 합니다. `.kiro/agents/aidlc-main.json` (또는 원하는 에이전트)의 `resources`에 추가합니다.
+이제 스킬·steering을 에이전트가 실제로 로드하게 합니다. `.kiro/agents/graph-aidlc-agent.json` (또는 원하는 에이전트)의 `resources`에 추가합니다.
 
 ```json
 {
- "name": "aidlc-main",
+ "name": "graph-aidlc-agent",
  "resources": [
  "file://.kiro/steering/kg-search-rules.md",
  "skill://.kiro/skills/*/SKILL.md"
@@ -157,7 +157,7 @@ description: Use when you need to inspect or understand existing module source c
 설정 검증:
 
 ```bash
-kiro-cli agent validate --path .kiro/agents/aidlc-main.json
+kiro-cli agent validate --path .kiro/agents/graph-aidlc-agent.json
 ```
 
 > **스크린샷 자리** — `kiro-cli agent validate` 통과 결과 (선택)

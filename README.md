@@ -2,9 +2,9 @@
 
 ![AIDLC Workshop](assets/aidlc-image.png)
 
-레거시 시스템(Brownfield)을 **Code Knowledge Graph**로 지도화하고, 그 지도를 **Kiro**에 물려 **AI-DLC(AI-Driven Development Lifecycle)** 워크플로우로 안전하게 변경·확장하는 핸즈온 워크샵입니다.
+기존 시스템(Brownfield)을 **Code Knowledge Graph**로 지도화하고, 그 지도를 **Kiro**에 연결하여 **AI-DLC(AI-Driven Development Lifecycle)** 워크플로우로 안전하게 변경·확장하는 핸즈온 워크샵입니다.
 
-> "코드는 있는데 오너십은 없다." 외주로 개발·운영되어 내부 지식이 유실된 시스템을, AI가 스스로 탐색하고 이해하게 만들어 다시 우리 손으로 개발하는 여정입니다.
+> AI가 스스로 코드를 탐색하고 이해하게 만들어 다시 우리 손으로 개발하는 여정입니다.
 
 ## 무엇을 배우나요
 
@@ -15,22 +15,22 @@
 
 ## 다루는 결과물
 
-이 워크샵은 실제 레거시 리포(예: 다중 모듈 Spring/JSP 시스템)를 소재로 합니다. 끝내면 다음을 갖추게 됩니다.
+이 워크샵은 실제 코드 리포지토리(예: 다중 모듈 Spring/JSP 시스템)를 소재로 합니다. 끝내면 다음을 갖추게 됩니다.
 
 - 모듈별 `.ua/knowledge-graph.json` (Code Knowledge Graph)
 - 그래프를 검색/해설하는 커스텀 스킬 (`kg-search`, `kg-explain`)
 - 그래프를 우선 참조하도록 유도하는 steering 규칙
-- AI-DLC 워크플로우를 실행하는 커스텀 에이전트 (`aidlc-main`)
+- 위 설정을 활용해 AI-DLC 워크플로우를 실행하는 커스텀 에이전트 (`graph-aidlc-agent`)
 
 ## 대상 / 사전 준비
 
-- **대상**: 레거시/브라운필드 시스템을 맡았거나, AI 에이전트로 대규모 코드베이스를 이해·개발하려는 개발자
+- **대상**: 브라운필드 시스템을 맡았거나, AI 에이전트로 대규모 코드베이스를 이해·개발하려는 개발자
 - **사전 준비물**
  - 터미널 (macOS / Linux / Windows Terminal·WSL)
  - **Kiro CLI** 설치 + 로그인
  - **Node.js ≥ 18** (Understand Anything 실행에 필요)
  - 분석 대상 코드베이스 (git 저장소 권장)
-- **소요 시간**: 약 2.5시간
+- **소요 시간**: 약 2시간 (AIDLC 워크플로우 제외)
 
 ## 진행 방법
 

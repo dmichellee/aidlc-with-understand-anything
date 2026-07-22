@@ -17,7 +17,7 @@ Kiro가 그래프를 우선 검색하고 소스로 확증 ← 3장
  │ + 운영·정책 문서 (file:// / knowledge)
  ▼
 코드 + 문서를 함께 근거로 ← 4장
- │ aidlc-main 에이전트 + core-workflow
+ │ graph-aidlc-agent 에이전트 + core-workflow
  ▼
 AI-DLC로 안전하게 변경·확장 ← 5장
 ```
@@ -90,6 +90,6 @@ A. 애플리케이션 코드는 워크스페이스 루트, 문서 산출물만 `
 
 - [Kiro 공식 문서](https://kiro.dev/docs/)
 - [Understand Anything](https://github.com/Egonex-AI/Understand-Anything)
-- 이 워크샵에서 만든 산출물: `.kiro/skills/kg-search`, `.kiro/skills/kg-explain`, `.kiro/steering/kg-search-rules.md`, `.kiro/agents/aidlc-main.json`
+- 이 워크샵에서 만든 산출물: `.kiro/skills/kg-search`, `.kiro/skills/kg-explain`, `.kiro/steering/kg-search-rules.md`, `.kiro/agents/graph-aidlc-agent.json`
 
-> 수고하셨습니다! 이제 레거시를 "지도 없이 헤매는 곳"이 아니라 "AI가 근거를 짚어 개발하는 곳"으로 바꿀 수 있습니다.
+> 수고하셨습니다! 이제 대규모 코드를 "지도 없이 헤매는 곳"이 아니라 "AI가 근거를 짚어 개발하는 곳"으로 바꿀 수 있습니다.
