@@ -129,8 +129,6 @@ templates/.kiro/
 cp -R /path/to/workshop/templates/.kiro/. ./.kiro/
 ```
 
-> 자세한 사용법은 `templates/README.md`를 참고하세요.
-
 ---
 
 ## 실습 4 — 커스텀 에이전트에 연결하기
