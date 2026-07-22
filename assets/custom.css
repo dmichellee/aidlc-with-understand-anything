@@ -309,3 +309,19 @@
 .book .book-body ::selection {
   background: #FFCC0240;
 }
+
+/* --- Warning Blockquotes --- */
+.book .book-body .warning-block {
+  background: #fff5f5;
+  border: 1px solid #f0c0c0;
+  border-left: 4px solid #D70000;
+  padding: 18px 24px;
+  margin: 24px 0;
+  border-radius: 8px;
+  color: #333333;
+  font-size: 0.93em;
+}
+
+.book .book-body .warning-block p {
+  margin: 0;
+}
