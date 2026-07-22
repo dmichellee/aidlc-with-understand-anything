@@ -38,11 +38,11 @@
 
 ```json
 {
- "id": "class:src/main/java/com/example/auth/JwtAuthenticationProvider.java:JwtAuthenticationProvider",
+ "id": "class:src/main/java/com/example/auth/ABCProvider.java:ABCProvider",
  "type": "class",
- "name": "JwtAuthenticationProvider",
- "filePath": "src/main/java/com/example/auth/JwtAuthenticationProvider.java",
- "summary": "Spring Security AuthenticationProvider that verifies JWT ...",
+ "name": "ABCProvider",
+ "filePath": "src/main/java/com/example/auth/ABCProvider.java",
+ "summary": "Security AuthenticationProvider that verifies JWT ...",
  "tags": ["security", "authentication", "spring"],
  "complexity": "moderate"
 }
@@ -117,7 +117,7 @@ Understand Anything 실행 시 내부적으로 다음 에이전트들이 순차/
 코드에서 "인증이 어디서 처리되지?"를 찾는다고 합시다.
 
 - **grep만 쓰면**: `grep -r "auth" .` → 수천 줄. 어디부터 봐야 할지 모름.
-- **그래프를 쓰면**: 그래프에서 `auth|authentication|jwt` 로 노드를 좁힘 → `JwtAuthenticationProvider` 같은 핵심 클래스 노드 특정 → 그 노드의 엣지로 "무엇이 이걸 호출하는지" 파악 → 지목된 `filePath`만 열어 확증.
+- **그래프를 쓰면**: 그래프에서 `auth|authentication|jwt` 로 노드를 좁힘 → `ABCProvider` 같은 핵심 클래스 노드 특정 → 그 노드의 엣지로 "무엇이 이걸 호출하는지" 파악 → 지목된 `filePath`만 열어 확증.
 
 > 그래프는 **지도**, 소스코드는 **최종 근거**입니다. 이 워크샵 내내 반복되는 원칙입니다.
 

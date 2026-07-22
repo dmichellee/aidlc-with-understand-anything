@@ -41,7 +41,7 @@
 
 `.kiro/skills/kg-search/SKILL.md`를 만듭니다. 스킬 파일은 반드시 YAML frontmatter(`name`, `description`)로 시작해야 합니다.
 
-> **Kiro에게 시킬 프롬프트**
+> **Kiro에게 시킬 예시 프롬프트**
 > ```
 > .kiro/skills/kg-search/SKILL.md 스킬을 만들어줘. 목적은:
 > - 기존 코드 파악 시 <module>/.ua/knowledge-graph.json 을 먼저 grep으로 검색
@@ -79,7 +79,7 @@ description: Use when you need to inspect or understand existing module source c
 
 `kg-search`가 "찾기/개괄"이라면 `kg-explain`은 "**찾은 것 하나를 끝까지 해설**"입니다.
 
-> **Kiro에게 시킬 프롬프트**
+> **Kiro에게 시킬 예시 프롬프트**
 > ```
 > .kiro/skills/kg-explain/SKILL.md 를 만들어줘. 목적은:
 > - 대상(파일 경로 또는 경로:함수명)이 이미 특정된 상태에서 그 컴포넌트 하나를 심층 해설
@@ -93,7 +93,7 @@ description: Use when you need to inspect or understand existing module source c
 
 두 스킬의 목적이 섞이지 않도록, **판단 기준을 한 곳(steering)에** 못박습니다.
 
-> **Kiro에게 시킬 프롬프트**
+> **Kiro에게 시킬 예시 프롬프트**
 > ```
 > .kiro/steering/kg-search-rules.md 를 만들어줘. 내용:
 > - 기존 코드 파악 시 무작정 grep/read 하지 말고 해당 모듈 그래프를 먼저 검색
@@ -166,7 +166,7 @@ kiro-cli agent validate --path .kiro/agents/graph-aidlc-agent.json
 kiro-cli chat --agent graph-aidlc-agent
 ```
 
-> **Kiro에게 시킬 프롬프트**
+> **Kiro에게 시킬 예시 프롬프트**
 > ```
 > 인증은 어느 모듈에서 어떻게 처리돼? 관련 코드를 찾아줘.
 > ```
@@ -181,9 +181,9 @@ kiro-cli chat --agent graph-aidlc-agent
 
 이어서 특정 대상을 지정하면 `kg-explain`으로 넘어갑니다.
 
-> **Kiro에게 시킬 프롬프트**
+> **Kiro에게 시킬 예시 프롬프트**
 > ```
-> 방금 찾은 JwtAuthenticationProvider 클래스를 뜯어서 설명해줘.
+> 방금 찾은 ABC 클래스에 대해 자세히 설명해줘.
 > ```
 
 ## 체크포인트
@@ -191,7 +191,7 @@ kiro-cli chat --agent graph-aidlc-agent
 - [ ] `.kiro/skills/kg-search/SKILL.md`가 생성됐고 frontmatter가 올바르다
 - [ ] `.kiro/skills/kg-explain/SKILL.md`가 생성됐다
 - [ ] `.kiro/steering/kg-search-rules.md`에 라우팅 규칙이 있다
-- [ ] 에이전트 `resources`에 steering(명시) + 스킬 글롭이 있다
+- [ ] 에이전트 `resources`에 steering + skill이 있다
 - [ ] `agent validate`가 통과한다
 - [ ] 자연어 질의 시 그래프를 먼저 검색하고 소스로 확증한다
 
@@ -200,7 +200,6 @@ kiro-cli chat --agent graph-aidlc-agent
 | 증상 | 해결 |
 | --- | --- |
 | 스킬이 호출 안 됨 | `description`이 작업과 매칭되는지 확인. frontmatter 누락 시 스킬로 인식 안 됨 |
-| steering 규칙이 반영 안 됨 | 커스텀 에이전트는 steering 자동 로드 안 함 → `resources`에 `file://` 명시 |
 | kg-search와 kg-explain이 헷갈려 호출됨 | 두 description의 상호배타 문구 확인, steering 라우팅 규칙 강화 |
 | 한국어 질의에 0건 | 그래프가 영어. 스킬 4단계(키워드 확장)가 있는지 확인 |
 | 새 스킬이 안 잡힘 | `resources` 글롭이 `skill://.kiro/skills/*/SKILL.md` 형태인지 확인 |
