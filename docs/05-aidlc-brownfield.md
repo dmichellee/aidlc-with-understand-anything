@@ -71,9 +71,6 @@ Greenfield(신규)와 달리 브라운필드는 **기존 코드가 진실의 원
 
 > **승인 게이트**: Reverse Engineering 산출물을 제시한 뒤 **사용자 확인 전까지 다음으로 넘어가지 않습니다.** 산출물이 실제 코드와 맞는지 검토하세요.
 
-> **스크린샷 자리** — Reverse Engineering 산출물 + 승인 게이트 메시지
-> <!-- ![Reverse Engineering 산출물](../assets/05-reverse-engineering.png) -->
-
 ## 실습 2 — Requirements & Workflow Planning
 
 승인하면 요구사항 분석으로 넘어갑니다.

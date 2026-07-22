@@ -153,9 +153,6 @@ cp -R /path/to/workshop/templates/.kiro/. ./.kiro/
 kiro-cli agent validate --path .kiro/agents/graph-aidlc-agent.json
 ```
 
-> **스크린샷 자리** — `kiro-cli agent validate` 통과 결과 (선택)
-> <!-- ![agent validate 결과](../assets/03-agent-validate.png) -->
-
 ## 실습 5 — 동작 확인
 
 에이전트로 세션을 열고 자연어로 물어봅니다.
@@ -173,9 +170,6 @@ kiro-cli chat --agent graph-aidlc-agent
 1. steering 규칙에 따라 `kg-search` 스킬이 호출됨
 2. "인증" → `auth|authentication|jwt|login|token` 로 확장해 해당 모듈 그래프를 grep
 3. 매칭 노드의 엣지를 추적하고 지목된 소스 파일을 열어 근거 제시
-
-> **스크린샷 자리** — Kiro가 kg-search로 그래프를 grep하고 근거를 제시하는 대화 **(필수)**
-> <!-- ![kg-search 동작](../assets/03-kg-search-in-action.png) -->
 
 이어서 특정 대상을 지정하면 `kg-explain`으로 넘어갑니다.
 

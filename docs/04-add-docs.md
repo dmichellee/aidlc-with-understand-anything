@@ -103,9 +103,6 @@ docs/policies/
 
 `knowledge`는 임베딩 기반이라 키워드가 정확히 일치하지 않아도 의미가 가까운 문단을 찾아줍니다. 코드 그래프(grep 기반)와 상호보완됩니다.
 
-> **스크린샷 자리** — `knowledge` 도구로 정책 문서를 의미 검색한 결과 (선택)
-> <!-- ![knowledge 검색 결과](../assets/04-knowledge-search.png) -->
-
 | | Code Knowledge Graph (grep) | knowledge (임베딩) |
 | --- | --- | --- |
 | 대상 | 코드 구조·관계 | 문서 내용 |
